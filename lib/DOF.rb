@@ -1,6 +1,19 @@
 require "DOF/version"
 
 module DOF
-  class Error < StandardError; end
-  # Your code goes here...
+  def self.config
+    yield self
+  end
+
+  def self.version
+    @version
+  end
+
+  def self.base_uri
+    @base_uri
+  end
+
+  def self.base_uri=(base_uri)
+    @base_uri = base_uri
+  end
 end

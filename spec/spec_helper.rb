@@ -1,5 +1,9 @@
 require "bundler/setup"
 require "DOF"
+require 'simplecov'
+require 'webmock/rspec'
+
+SimpleCov.start { add_filter '/spec/' }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +14,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:all) do
+    DOF.base_uri = 'https://sidofqa.segob.gob.mx/dof/sidof/'
   end
 end

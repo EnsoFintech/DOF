@@ -3,7 +3,16 @@ RSpec.describe DOF do
     expect(DOF::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it 'configures gem' do
+    # Given
+    base_uri = 'http://google.com'
+
+    # When
+    DOF.config do |c|
+      c.base_uri = base_uri
+    end
+
+    # Then
+    expect(DOF.base_uri).to eq base_uri
   end
 end
