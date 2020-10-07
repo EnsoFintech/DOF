@@ -1,4 +1,11 @@
 require "DOF/version"
+require "DOF/connection"
+require "DOF/client"
+require "DOF/endpoints"
+require "DOF/indicator"
+require "DOF/indicator_codes"
+require "DOF/errors/base_error"
+require "DOF/errors/network_error"
 
 module DOF
   def self.config
