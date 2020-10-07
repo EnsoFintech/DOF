@@ -1,5 +1,5 @@
 module DOF
   module Endpoints
-    INDICATORS = "indicadores/"
+    INDICATORS = "indicadores"
   end
 end
