@@ -6,11 +6,11 @@ require "DOF/version"
 Gem::Specification.new do |spec|
   spec.name          = "DOF"
   spec.version       = DOF::VERSION
-  spec.authors       = ["yellowme"]
+  spec.authors       = ["Yellowme"]
   spec.email         = ["hola@yellowme.mx"]
 
   spec.summary       = %q{A simple service to consume Mexican DOF data}
-  spec.homepage      = "https://yellowme.mx"
+  spec.homepage      = "https://github.com/yellowme/DOF"
 
 
   # Specify which files should be added to the gem when it is released.
