@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "DOF/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "DOF"
+  spec.name          = "Dof"
   spec.version       = DOF::VERSION
   spec.authors       = ["Yellowme"]
   spec.email         = ["hola@yellowme.mx"]

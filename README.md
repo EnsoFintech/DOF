@@ -6,7 +6,7 @@ A simple gem to interact with the Mexican DOF open data service
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'DOF'
+gem 'Dof'
 ```
 
 And then execute:
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install DOF
+    $ gem install Dof
 
 ## Usage
 
