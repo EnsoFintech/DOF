@@ -11,3 +11,4 @@ load "#{spec.gem_dir}/lib/tasks/app_version_tasks.rake"
 AppVersionTasks.configure do |config|
   config.application_name = 'DOF'
   config.version_file_path = File.join('lib', 'DOF', 'version.rb')
+end
