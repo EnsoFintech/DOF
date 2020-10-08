@@ -18,7 +18,7 @@ RSpec.describe DOF::Indicator do
       status: 200,
       body: raw_response.to_json
     )
-    response = DOF::Indicator.USD_rate
+    response = DOF::Indicator.USD_exchange_rate
 
     # Then 
     expect(response).to be_instance_of DOF::Responses::RequestResponse
@@ -45,7 +45,7 @@ RSpec.describe DOF::Indicator do
       status: 200,
       body: raw_response.to_json
     )
-    response = DOF::Indicator.USD_rate(date: initial_date, end_date: end_date)
+    response = DOF::Indicator.USD_exchange_rate(date: initial_date, end_date: end_date)
 
     # Then 
     expect(response).to be_instance_of DOF::Responses::RequestResponse
@@ -90,7 +90,7 @@ RSpec.describe DOF::Indicator do
       status: 200,
       body: raw_response.to_json
     )
-    response = DOF::Indicator.USD_rate(date: initial_date, end_date: end_date)
+    response = DOF::Indicator.USD_exchange_rate(date: initial_date, end_date: end_date)
 
     # Then 
     expect(response).to be_instance_of DOF::Responses::RequestResponse
@@ -115,7 +115,7 @@ RSpec.describe DOF::Indicator do
       status: 200,
       body: raw_response.to_json
     )
-    response = DOF::Indicator.UDIS_rate
+    response = DOF::Indicator.UDIS_exchange_rate
 
     # Then 
     expect(response).to be_instance_of DOF::Responses::RequestResponse
@@ -142,7 +142,7 @@ RSpec.describe DOF::Indicator do
       status: 200,
       body: raw_response.to_json
     )
-    response = DOF::Indicator.UDIS_rate(date: initial_date, end_date: end_date)
+    response = DOF::Indicator.UDIS_exchange_rate(date: initial_date, end_date: end_date)
 
     # Then 
     expect(response).to be_instance_of DOF::Responses::RequestResponse

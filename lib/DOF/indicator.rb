@@ -2,12 +2,12 @@ module DOF
   class Indicator
     class << self
 
-      def USD_rate(date: Date.today, end_date: date)
+      def USD_exchange_rate(date: Date.today, end_date: date)
         raw_response = get(Indicator_Codes::USD, date, end_date)
         response = Responses::RequestResponse.new(raw_response)
       end
 
-      def UDIS_rate(date: Date.today, end_date: date)
+      def UDIS_exchange_rate(date: Date.today, end_date: date)
         raw_response = get(Indicator_Codes::UDIS, date, end_date)
         response = Responses::RequestResponse.new(raw_response)
       end
