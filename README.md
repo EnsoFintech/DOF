@@ -1,8 +1,5 @@
 # DOF
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/DOF`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple gem to interact with the Mexican DOF open data service
 
 ## Installation
 
@@ -22,14 +19,58 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add a new initializer and add the following lines
+```ruby
+require "DOF"
 
-## Development
+DOF.config do |c|
+  c.base_uri = "https://sidofqa.segob.gob.mx/dof/sidof/"
+end
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### Querying the current USD exchange rate
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To get the current (daily) exchange rate call `USD_exchange_rate`
+
+```ruby
+DOF::Indicator.USD_exchange_rate
+```
+
+This will return an `RequestResponse` object with the following attributes:
+
+```ruby
+# An array of indicator objects
+:indicators
+# A request response confirmation
+:response_code
+# response status eg: 200/500
+:response_status
+# number of indicators found
+:total_indicators
+```
+
+### Querying the current UDIS exchange rate
+
+To get the current (daily) exchange rate call `UDIS_exchange_rate`
+
+```ruby
+DOF::Indicator.UDIS_exchange_rate
+```
+
+### Querying indicators by date range
+
+You can call `USD_exchange_rate` and `UDIS_exchange_rate` with date params
+
+```ruby
+DOF::Indicator.USD_exchange_rate(date: initial_date, end_date: end_date)
+```
+
+The accepted date formats are:
+* `String` in *mm/dd/YYYY* format
+* `String` in *mm-dd-YYYY* format
+* `String` in *mm.dd.YYYY* format
+* `Date` type, eg: *Date.today*
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/DOF.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yellowme/DOF.
