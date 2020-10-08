@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    DOF (0.1.0)
+    Dof (1.0.0)
       faraday (~> 1.0.0)
 
 GEM
@@ -49,7 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  DOF!
+  Dof!
   app_version_tasks
   bundler (~> 1.17)
   rake (~> 10.0)

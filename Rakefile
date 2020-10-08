@@ -9,6 +9,6 @@ task :default => :spec
 spec = Gem::Specification.find_by_name 'app_version_tasks'
 load "#{spec.gem_dir}/lib/tasks/app_version_tasks.rake"
 AppVersionTasks.configure do |config|
-  config.application_name = 'Dof'
+  config.application_name = 'dof'
   config.version_file_path = File.join('lib', 'DOF', 'version.rb')
 end
